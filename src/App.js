@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { useState } from 'react';
-// import Display from './components/Display';
+import Display from './components/Display/Display.js';
 // import Cathphrase from './components/Catchphrase';
 import Controls from './components/Controls/Controls.js';
 import bg from './bg.jpeg';
@@ -47,7 +47,9 @@ function App() {
             <Controls {...{ head, middle, bottom, input, setInput, handleClick, handleChange }} />
             {/* <Cathphrase /> */}
           </div>
-          <div className="right">{/* <Display /> */}</div>
+          <div className="right">
+            <Display {...{ head, middle, bottom }} />
+          </div>
         </section>
       </main>
     </div>
