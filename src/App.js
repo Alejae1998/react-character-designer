@@ -1,16 +1,16 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import React, { useState } from 'react';
 import Display from './components/Display/Display.js';
-// import Cathphrase from './components/Catchphrase';
+import Cathphrase from './components/Catchphrase/Catchphrase.js';
 import Controls from './components/Controls/Controls.js';
 import bg from './bg.jpeg';
 function App() {
-  const [head, setHead] = useState('');
-  const [middle, setMiddle] = useState('');
-  const [bottom, setBottom] = useState('');
+  const [head, setHead] = useState('duck');
+  const [middle, setMiddle] = useState('pink');
+  const [bottom, setBottom] = useState('leg');
   const [input, setInput] = useState('');
-  const [catchphrase, setCatchphrase] = useState([]);
+  const [catchphrases, setCatchphrase] = useState([]);
   const [headCount, setHeadCount] = useState(0);
   const [middleCount, setMiddleCount] = useState(0);
   const [bottomCount, setBottomCount] = useState(0);
@@ -45,7 +45,7 @@ function App() {
         <section className="container">
           <div className="left">
             <Controls {...{ head, middle, bottom, input, setInput, handleClick, handleChange }} />
-            {/* <Cathphrase /> */}
+            <Cathphrase {...{ headCount, middleCount, bottomCount, catchphrases }} />
           </div>
           <div className="right">
             <Display {...{ head, middle, bottom }} />
