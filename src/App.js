@@ -3,7 +3,7 @@ import './App.css';
 import React, { useState } from 'react';
 // import Display from './components/Display';
 // import Cathphrase from './components/Catchphrase';
-import Controls from './components/Controls';
+import Controls from './components/Controls/Controls.js';
 import bg from './bg.jpeg';
 function App() {
   const [head, setHead] = useState('');
