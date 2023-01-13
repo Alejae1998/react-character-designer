@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { useState } from 'react';
-import Display from './components/Display';
-import Cathphrase from './components/Catchphrase';
+// import Display from './components/Display';
+// import Cathphrase from './components/Catchphrase';
 import Controls from './components/Controls';
 import bg from './bg.jpeg';
 function App() {
@@ -45,11 +45,9 @@ function App() {
         <section className="container">
           <div className="left">
             <Controls />
-            <Cathphrase />
+            {/* <Cathphrase /> */}
           </div>
-          <div className="right">
-            <Display />
-          </div>
+          <div className="right">{/* <Display /> */}</div>
         </section>
       </main>
     </div>
