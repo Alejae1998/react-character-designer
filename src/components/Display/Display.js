@@ -11,7 +11,7 @@ export default function Character({ head, middle, bottom }) {
           }}
         ></div>
         <div
-          className="bd middle"
+          className="bg middle"
           style={{
             backgroundImage: `url('${process.env.PUBLIC_URL}/characters/${middle}-middle.png')`,
           }}

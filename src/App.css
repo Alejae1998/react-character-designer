@@ -54,7 +54,7 @@ h1 {
 .character {
   display: grid;
   grid-template-rows: 1.5fr 1fr 2fr;
-  height: 600px;
+  height: 300px;
   width: 200px;
 }
 
