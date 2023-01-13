@@ -44,7 +44,7 @@ function App() {
         <h1>Character Designer</h1>
         <section className="container">
           <div className="left">
-            <Controls />
+            <Controls {...{ head, middle, bottom, input, setInput, handleClick, handleChange }} />
             {/* <Cathphrase /> */}
           </div>
           <div className="right">{/* <Display /> */}</div>
