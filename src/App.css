@@ -1,38 +1,141 @@
+body {
+  --color1: #dcdcdd;
+  --color2: #c5c3c6;
+  --color3: #46494c;
+  --color4: #4c5c68;
+  --color5: #1985a1;
+  --colorDark: #272727;
+  --color-light: #f4f1de;
+  --color-orange: #e07a5f;
+  --color-blue: #3d405b;
+  --color-green: #81b29a;
+  --color-yellow: #f2cc8f;
+  --header-height: 40px;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--color4);
+  color: var(--color5);
+}
+
 .App {
-  text-align: center;
+  background-size: 400px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
+}
+main {
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 80vw;
+  max-width: 800px;
+  background-color: white;
+}
+h1 {
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+  text-transform: uppercase;
+  color: var(--color4);
+}
+
+.left,
+.right {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
   flex-direction: column;
   align-items: center;
+}
+.picker {
+  width: 100%;
+}
+
+.character {
+  display: grid;
+  grid-template-rows: 1.5fr 1fr 2fr;
+  height: 300px;
+  width: 200px;
+}
+
+.bg {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.catchphrases {
+  height: 200px;
+  overflow: scroll;
+  font-size: 1.5rem;
+  color: var(--color3);
+}
+
+#stats {
+  margin-left: 20px;
+}
+.form-control {
+  margin-top: 20px;
+  margin-left: 20px;
+  position: relative;
+}
+
+input[type='text'],
+select,
+textarea {
+  background-color: var(--color1);
+  border: none;
+  border-radius: 2px;
+  height: 2rem;
+  width: 80%;
+  margin-top: 20px;
+}
+
+input[type='text']:focus,
+select:focus,
+textarea:focus {
+  border: none;
+  box-shadow: 0 0 3px 2px var(--color5);
+  outline: none;
+}
+
+input[type='text'] + label,
+select + label,
+textarea + label,
+.form-control > label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+a.button,
+button {
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  width: 80%;
+  height: 2rem;
+  background-color: var(--color5);
+  color: var(--color1);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-decoration: none;
+  font-size: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+a.button.warning,
+button.warning {
+  background-color: var(--color-orange);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+textarea {
+  height: 150px;
+  resize: none;
+  font-family: Arial, Helvetica, sans-serif;
 }
